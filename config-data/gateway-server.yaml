@@ -21,7 +21,7 @@ spring:
             allowedMethods: "*"
             allowedHeaders: "*"
       routes:
-        - id: vehiculo-service
-          uri: lb://vehiculo-service:8091
+        - id: ms-vehiculo
+          uri: lb://ms-vehiculo:8090
           predicates:
-            - Path=/api/v1/vehiculo/**
+            - Path=/api/v1/vehiculos/**
