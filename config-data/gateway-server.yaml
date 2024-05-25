@@ -25,3 +25,7 @@ spring:
           uri: lb://ms-vehiculo:8090
           predicates:
             - Path=/api/v1/vehiculos/**
+        - id: ms-detalle
+          uri: lb://ms-detalle:8091
+          predicates:
+            - Path=/api/v1/detalles/**
