@@ -21,10 +21,6 @@ public class HistorialService {
         return historialRepository.findById(id).get();
     }
 
-    public HistorialEntity getHistorialReparacionesByIdReparacion(Long idReparacion) {
-        return historialRepository.findByIdReparacion(idReparacion);
-    }
-
     public HistorialEntity getHistorialReparacionesByPatente(String patente) {
         return historialRepository.findByPatente(patente);
     }

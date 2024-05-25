@@ -1,6 +1,5 @@
 package com.tingeso.ms_descuentos_cantidad_reparaciones.repositories;
 
-
 import com.tingeso.ms_descuentos_cantidad_reparaciones.model.Detalle;
 import com.tingeso.ms_descuentos_cantidad_reparaciones.model.Vehiculo;
 import org.springframework.stereotype.Repository;

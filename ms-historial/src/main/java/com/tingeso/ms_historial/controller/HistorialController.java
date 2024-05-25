@@ -27,12 +27,6 @@ public class HistorialController {
         return ResponseEntity.ok(historialReparaciones);
     }
 
-    @GetMapping("/idReparacion/{idReparacion}")
-    public ResponseEntity<HistorialEntity> getHistorialReparacionesByIdReparacion(@PathVariable Long idReparacion) {
-        HistorialEntity historialReparaciones = historialService.getHistorialReparacionesByIdReparacion(idReparacion);
-        return ResponseEntity.ok(historialReparaciones);
-    }
-
     @GetMapping("/patente/{patente}")
     public ResponseEntity<HistorialEntity> getHistorialReparacionesByPatente(@PathVariable String patente) {
         HistorialEntity historialReparaciones = historialService.getHistorialReparacionesByPatente(patente);

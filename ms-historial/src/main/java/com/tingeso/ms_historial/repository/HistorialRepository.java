@@ -9,7 +9,6 @@ import java.util.List;
 @Repository
 public interface HistorialRepository extends JpaRepository <HistorialEntity, Long>{
 
-    public HistorialEntity findByIdReparacion(Long idReparacion);
 
     public HistorialEntity findByPatente(String patente);
 
