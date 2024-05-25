@@ -25,8 +25,15 @@ spring:
           uri: lb://ms-vehiculo:8090
           predicates:
             - Path=/api/v1/vehiculos/**
-      routes:
         - id: ms-detalle
           uri: lb://ms-detalle:8091
           predicates:
             - Path=/api/v1/detalles/**
+        - id: ms-historial
+          uri: lb://ms-detalle:8092
+          predicates:
+            - Path=/api/v1/historial/**
+        - id: ms-descuentos-cantidad-reparacion
+          uri: lb://ms-descuentos-cantidad-reparacion:8093
+          predicates:
+            - Path=/api/v1/descuentos_cantidad_reparacion/**
