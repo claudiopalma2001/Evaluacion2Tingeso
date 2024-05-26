@@ -21,19 +21,7 @@ spring:
             allowedMethods: "*"
             allowedHeaders: "*"
       routes:
-        - id: vehiculo-service
-          uri: lb://vehiculo-service:8091
+        - id: ms-vehiculo
+          uri: lb://vehiculo-service:8090
           predicates:
             - Path=/api/v1/vehiculos/**
-        - id: precio-por-rep-service
-          uri: lb://precio-por-rep-service:8092
-          predicates:
-            - Path=/api/v1/precioPorRep/**
-        - id: ingreso-service
-          uri: lb://ingreso-service:8093
-          predicates:
-            - Path=/api/v1/ingresoAReparacion/**
-        - id: rdr-ingreso-service
-          uri: lb://rdr-ingreso-service:8094
-          predicates:
-            - Path=/api/v1/repEspecifica/**
