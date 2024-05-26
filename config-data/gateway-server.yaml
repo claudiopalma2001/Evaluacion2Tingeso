@@ -21,23 +21,19 @@ spring:
             allowedMethods: "*"
             allowedHeaders: "*"
       routes:
-        - id: ms-vehiculo
-          uri: lb://ms-vehiculo:8090
+        - id: vehiculo-service
+          uri: lb://vehiculo-service:8091
           predicates:
             - Path=/api/v1/vehiculos/**
-        - id: ms-detalle
-          uri: lb://ms-detalle:8091
+        - id: precio-por-rep-service
+          uri: lb://precio-por-rep-service:8092
           predicates:
-            - Path=/api/v1/detalles/**
-        - id: ms-historial
-          uri: lb://ms-detalle:8092
+            - Path=/api/v1/precioPorRep/**
+        - id: ingreso-service
+          uri: lb://ingreso-service:8093
           predicates:
-            - Path=/api/v1/historial/**
-        - id: ms-descuentos-cantidad-reparacion
-          uri: lb://ms-descuentos-cantidad-reparacion:8093
+            - Path=/api/v1/ingresoAReparacion/**
+        - id: rdr-ingreso-service
+          uri: lb://rdr-ingreso-service:8094
           predicates:
-            - Path=/api/v1/descuentos_cantidad_reparacion/**
-        - id: ms-descuentos-bonos
-          uri: lb://ms-descuentos-cantidad-reparacion:8094
-          predicates:
-            - Path=/api/v1/descuentos_bonos/**
+            - Path=/api/v1/repEspecifica/**
